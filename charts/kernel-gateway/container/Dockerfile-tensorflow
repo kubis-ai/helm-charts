@@ -1,0 +1,6 @@
+FROM tensorflow/tensorflow:2.6.0-gpu
+
+RUN pip install jupyter_kernel_gateway
+
+EXPOSE 8888
+CMD ["jupyter", "kernelgateway", "--KernelGatewayApp.api=kernel_gateway.jupyter_websocket", "--KernelGatewayApp.allow_origin=*", "--KernelGatewayApp.allow_headers=content-type,x-xsrftoken", "--KernelGatewayApp.ip=0.0.0.0", "--KernelGatewayApp.port=8888", "--JupyterWebsocketPersonality.list_kernels=true"]

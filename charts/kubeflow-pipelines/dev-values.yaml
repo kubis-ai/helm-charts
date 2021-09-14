@@ -1,0 +1,23 @@
+frontend:
+  isExposed: true
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-2:045329000471:targetgroup/target-group-frontend/3b58bd5f057f311c
+  nodePort: 32005
+
+apiserver:
+  isExposed: false
+  targetGroupARN: 
+  nodePort: 
+
+iam:
+  role: arn:aws:iam::045329000471:role/ArtifactStoreRoleForKube2iam
+
+managedArtifactStore:
+  s3BucketName: kubeflow.space-doughnut.com
+
+managedMetadataStore:
+  dbHost: terraform-2021061609130186060000000c.cikuvb3sbmy9.us-east-2.rds.amazonaws.com
+  dbUsername: admin
+  dbPassword: foobarbar
+
+minioServiceHost: s3.amazonaws.com
+minioServiceRegion: us-east-2

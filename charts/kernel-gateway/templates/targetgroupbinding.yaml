@@ -1,0 +1,15 @@
+{{ if .Values.isExposed }}
+apiVersion: elbv2.k8s.aws/v1beta1
+kind: TargetGroupBinding
+metadata:
+  name: lb-targetgroup-kernel-gateway
+  labels:
+    app: lb-targetgroup-kernel-gateway
+    app.kubernetes.io/name: kernel-gateway
+spec:
+  serviceRef:
+    name: kernel-gateway
+    port: 8888
+  targetGroupARN: {{ .Values.targetGroupARN | quote }}
+  targetType: instance
+{{ end }}
