@@ -1,0 +1,4 @@
+containerImage: nathaliamdc/kernelgateway
+nodePort:
+isExposed: true
+targetGroupARN:

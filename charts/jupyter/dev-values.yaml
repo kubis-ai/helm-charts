@@ -1,0 +1,7 @@
+service:
+  isExposed: true
+  targetGroupARN: arn:aws:elasticloadbalancing:us-east-2:045329000471:targetgroup/target-group-jupyter/6e3a8eee96fe3b1c
+  nodePort: 32008
+
+elasticFileSystem:
+  id: fs-3701fb4c

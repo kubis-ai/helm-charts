@@ -1,0 +1,105 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app.kubernetes.io/name: kube2iam
+  name: kube2iam
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: kube2iam
+  name: kube2iam
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - namespaces
+  - pods
+  verbs:
+  - get
+  - list
+  - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  labels:
+    app.kubernetes.io/name: kube2iam
+  name: kube2iam
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: kube2iam
+subjects:
+- kind: ServiceAccount
+  name: kube2iam
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: kubelet-api-admin
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:kubelet-api-admin
+subjects:
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: kube-apiserver-kubelet-client
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  labels:
+    app.kubernetes.io/name: kube2iam
+  name: kube2iam
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: kube2iam
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: kube2iam
+    spec:
+      containers:
+      - args:
+        - --auto-discover-default-role
+        - --auto-discover-base-arn
+        - --host-interface=eni+
+        - --host-ip=$(HOST_IP)
+        - --iptables=true
+        - --node=$(NODE_NAME)
+        env:
+        - name: HOST_IP
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.podIP
+        - name: NODE_NAME
+          valueFrom:
+            fieldRef:
+              fieldPath: spec.nodeName
+        image: jtblin/kube2iam:latest
+        name: kube2iam
+        ports:
+        - containerPort: 8181
+          protocol: TCP
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /run/xtables.lock
+          name: xtables-lock
+          readOnly: false
+      hostNetwork: true
+      serviceAccountName: kube2iam
+      volumes:
+      - hostPath:
+          path: /run/xtables.lock
+          type: FileOrCreate
+        name: xtables-lock
