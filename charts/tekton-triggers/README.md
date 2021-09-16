@@ -4,4 +4,4 @@ The Helm chart was created from the [v0.16.0 manifest](https://storage.googleapi
 
 ## Upgrading
 
-When upgrading, download the manifests from the [official GitHub repo](https://github.com/tektoncd/triggers/releases) and replace the old manifests in `templates`.
+When upgrading, download the manifests from the [official GitHub repo](https://github.com/tektoncd/triggers/releases) and replace the old manifests in `templates` and `crds`. You should separate the CRDs from all other resources to avoid installation problems.
