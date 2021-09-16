@@ -50,6 +50,13 @@ entries:
     version: 2.6.0
   kubeflow-pipelines:
   - apiVersion: v1
+    created: "2021-09-16T11:04:00.043830178Z"
+    digest: 8e991e8298213bd720cbbc7d0b2516946a787fc2091b6aea45739bbc8fcbcbf1
+    name: kubeflow-pipelines
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/kubeflow-pipelines-1.0.1/kubeflow-pipelines-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v1
     created: "2021-09-14T09:38:16.198749441Z"
     digest: 791f1ef519c7a0518d789ca23916bb2e75588b668d56192efc9274baf4914ebc
     name: kubeflow-pipelines
@@ -72,4 +79,20 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/lb-controller-2.1.2/lb-controller-2.1.2.tgz
     version: 2.1.2
-generated: "2021-09-14T09:38:16.519902642Z"
+  tekton-dashboard:
+  - apiVersion: v1
+    created: "2021-09-16T11:04:00.220195031Z"
+    digest: 7357a81d46a7aacd41b13dbfd84d4a38a23b986837448033d875072667848b21
+    name: tekton-dashboard
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/tekton-dashboard-0.20.0/tekton-dashboard-0.20.0.tgz
+    version: 0.20.0
+  tekton-pipelines:
+  - apiVersion: v1
+    created: "2021-09-16T11:04:00.387406318Z"
+    digest: 63aa64ad49b3f4cc85c4025e4632aa8d202f5503dc73cfdeb814c7e89ddb3017
+    name: tekton-pipelines
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/tekton-pipelines-0.27.3/tekton-pipelines-0.27.3.tgz
+    version: 0.27.3
+generated: "2021-09-16T11:04:00.387416818Z"
