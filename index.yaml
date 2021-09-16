@@ -97,10 +97,17 @@ entries:
     version: 0.27.3
   tekton-triggers:
   - apiVersion: v1
+    created: "2021-09-16T12:20:54.945467243Z"
+    digest: a63c877124243d52fb2742879b9422cbda41dd88c69b0fec4c0de3f6e068ed43
+    name: tekton-triggers
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/tekton-triggers-0.16.1/tekton-triggers-0.16.1.tgz
+    version: 0.16.1
+  - apiVersion: v1
     created: "2021-09-16T12:07:47.521009545Z"
     digest: f86f5e88b05220b01ced6ae911c77fe7fe89c73d0659fe112036acaf2b41836b
     name: tekton-triggers
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/tekton-triggers-0.16.0/tekton-triggers-0.16.0.tgz
     version: 0.16.0
-generated: "2021-09-16T12:07:47.521020845Z"
+generated: "2021-09-16T12:20:54.945481143Z"
