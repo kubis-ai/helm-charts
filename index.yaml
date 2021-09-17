@@ -38,6 +38,20 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/efs-driver-1.2.0/efs-driver-1.2.0.tgz
     version: 1.2.0
+  istio-base:
+  - apiVersion: v1
+    created: "2021-09-17T13:58:07.97348437Z"
+    description: Helm chart for deploying Istio cluster resources and CRDs
+    digest: cbf45c20f35ec214ded46b15dbace49c88bef4519728fd215035a58a8d74b1e3
+    icon: https://istio.io/latest/favicons/android-192x192.png
+    keywords:
+    - istio
+    name: istio-base
+    sources:
+    - http://github.com/istio/istio
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/istio-base-1.11.2/istio-base-1.11.2.tgz
+    version: 1.11.2
   istio-discovery:
   - apiVersion: v1
     created: "2021-09-17T13:55:52.852908689Z"
@@ -172,4 +186,4 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/tekton-triggers-0.16.0/tekton-triggers-0.16.0.tgz
     version: 0.16.0
-generated: "2021-09-17T13:55:53.210410936Z"
+generated: "2021-09-17T13:58:07.97350617Z"
