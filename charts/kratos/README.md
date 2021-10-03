@@ -4,4 +4,4 @@ The Helm chart was created based on the latest version of the official [Kratos h
 
 ## Upgrading
 
-A single change was made: adding a cert-manager issuer in `templates/issuer`. When upgrading the chart, only the file with the issuer needs to be added.
+A single change was made: adding a cert-manager issuer in `templates/issuer.yaml`. When upgrading the chart, only the file with the issuer needs to be added.
