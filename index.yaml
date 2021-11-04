@@ -102,6 +102,18 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/kernel-gateway-1.0.0/kernel-gateway-1.0.0.tgz
     version: 1.0.0
+  kratos:
+  - apiVersion: v2
+    appVersion: 0.6.3-alpha.1
+    created: "2021-11-04T08:29:25.332265245Z"
+    description: A ORY Kratos Helm chart for Kubernetes
+    digest: 2e53a7fc503f2de217bab0edd671c9342db8cc4c819e0d47a829b59ab8a72df3
+    icon: https://raw.githubusercontent.com/ory/docs/master/docs/static/img/logo-kratos.svg
+    name: kratos
+    type: application
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/kratos-0.19.5/kratos-0.19.5.tgz
+    version: 0.19.5
   kube2iam:
   - apiVersion: v1
     created: "2021-09-14T09:38:16.007987612Z"
@@ -141,6 +153,18 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/lb-controller-2.1.2/lb-controller-2.1.2.tgz
     version: 2.1.2
+  linkerd2:
+  - apiVersion: v1
+    created: "2021-11-04T08:29:25.505317166Z"
+    dependencies:
+    - name: partials
+      repository: file://./partials
+      version: 0.1.0
+    digest: 303c4591a3b7475631d6b0c72c8304c9b5f42d87422fcf243fcf7fb78cc12179
+    name: linkerd2
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/linkerd2-2.11.1/linkerd2-2.11.1.tgz
+    version: 2.11.1
   tekton-dashboard:
   - apiVersion: v1
     created: "2021-09-16T11:04:00.220195031Z"
@@ -172,4 +196,4 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/tekton-triggers-0.16.0/tekton-triggers-0.16.0.tgz
     version: 0.16.0
-generated: "2021-10-03T07:34:15.216938682Z"
+generated: "2021-11-04T08:29:25.505336566Z"
