@@ -102,18 +102,6 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/kernel-gateway-1.0.0/kernel-gateway-1.0.0.tgz
     version: 1.0.0
-  kratos:
-  - apiVersion: v2
-    appVersion: 0.6.3-alpha.1
-    created: "2021-10-03T07:34:15.216923081Z"
-    description: A ORY Kratos Helm chart for Kubernetes
-    digest: cf8f7c5952eb29516e7e4ddc9c8795a6cc7cd363bd5c05d8b5da9dd6693e224d
-    icon: https://raw.githubusercontent.com/ory/docs/master/docs/static/img/logo-kratos.svg
-    name: kratos
-    type: application
-    urls:
-    - https://github.com/kubis-ai/helm-charts/releases/download/kratos-0.19.5/kratos-0.19.5.tgz
-    version: 0.19.5
   kube2iam:
   - apiVersion: v1
     created: "2021-09-14T09:38:16.007987612Z"
