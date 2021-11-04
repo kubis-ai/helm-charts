@@ -1,6 +1,6 @@
 # linkerd2
 
-> This chart was forked from the [Linkerd repo](https://github.com/linkerd/linkerd2)! It was changed to include automatic creation of TLS credentials using cert-manager. To update it: (1) clone the new chart from the official repo; (2) copy the `partials` folder to the chart root and change `requirements.yaml` and `requirements.lock` to read `repository: file://./partials` (3) add the `templates/cert-manager.yaml` files to `templates` folder; (4) update the helm chart version in `Chart.yaml` leaving only `apiVersion`, `appVersion` and `name` (see [ArtifactHUB](https://artifacthub.io/packages/helm/linkerd2/linkerd2)).
+> This chart was forked from the [Linkerd repo](https://github.com/linkerd/linkerd2)! It was changed to include automatic creation of TLS credentials using cert-manager. To update it: (1) clone the new chart from the official repo; (2) copy the `partials` folder to the chart root and change `requirements.yaml` and `requirements.lock` to read `repository: file://./partials` (3) add the `templates/cert-manager.yaml` files to `templates` folder; (4) update the helm chart version in `Chart.yaml` leaving only `version` and `name` (see [ArtifactHUB](https://artifacthub.io/packages/helm/linkerd2/linkerd2)).
 
 ---
 

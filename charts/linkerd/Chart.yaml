@@ -1,4 +1,2 @@
-apiVersion: "v1"
-# this version will be updated by the CI before publishing the Helm tarball
-appVersion: 2.11.1
+version: 2.11.1
 name: "linkerd2"
