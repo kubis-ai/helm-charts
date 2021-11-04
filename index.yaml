@@ -8,14 +8,6 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/argocd-vault-plugin-1.3.1/argocd-vault-plugin-1.3.1.tgz
     version: 1.3.1
-  cert-manager:
-  - apiVersion: v1
-    created: "2021-09-14T09:38:15.33020303Z"
-    digest: a0a70d266f1c438eea8c5cbc271ffb351e2c8360fb8dfac75188672b4763982f
-    name: cert-manager
-    urls:
-    - https://github.com/kubis-ai/helm-charts/releases/download/cert-manager-1.1.1/cert-manager-1.1.1.tgz
-    version: 1.1.1
   efs-driver:
   - apiVersion: v1
     created: "2021-09-14T09:38:15.513455904Z"
