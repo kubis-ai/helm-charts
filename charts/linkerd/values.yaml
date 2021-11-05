@@ -33,7 +33,7 @@ enableEndpointSlices: false
 # and the proxy-init container when injecting the proxy;
 # requires the linkerd-cni plugin to already be installed
 cniEnabled: false
-# -- Trust root certificate (ECDSA). It must be provided during install.
+# -- Trust root certificate (ECDSA). It must be provided during install
 identityTrustAnchorsPEM: |
 # -- Trust domain used for identity
 # @default -- clusterDomain
@@ -210,14 +210,12 @@ enablePSP: false
 # -- Failure policy for the proxy injector
 webhookFailurePolicy: Ignore
 
-
 # controllerImage -- Docker image for the destination and identity components
 controllerImage: cr.l5d.io/linkerd/controller
 # -- Number of replicas for each control plane pod
 controllerReplicas: 1
 # -- User ID for the control plane components
 controllerUID: 2103
-
 
 # destination configuration
 # set resources for the sp-validator and its linkerd proxy respectively
@@ -264,7 +262,6 @@ identity:
       # install
       keyPEM: |
 
-
 # -|- CPU, Memory and Ephemeral Storage resources required by the identity controller (see `proxy.resources` for sub-fields)
 #identityResources:
 # -|- CPU, Memory and Ephemeral Storage resources required by proxy injected into identity pod (see `proxy.resources` for sub-fields)
@@ -286,10 +283,10 @@ proxyInjector:
   # config.linkerd.io/admission-webhooks=disabled
   namespaceSelector:
     matchExpressions:
-    - key: config.linkerd.io/admission-webhooks
-      operator: NotIn
-      values:
-      - disabled
+      - key: config.linkerd.io/admission-webhooks
+        operator: NotIn
+        values:
+          - disabled
 
   # -- Certificate for the proxy injector. If not provided then Helm will generate one.
   crtPEM: |
@@ -315,10 +312,10 @@ profileValidator:
   # -- Namespace selector used by admission webhook
   namespaceSelector:
     matchExpressions:
-    - key: config.linkerd.io/admission-webhooks
-      operator: NotIn
-      values:
-      - disabled
+      - key: config.linkerd.io/admission-webhooks
+        operator: NotIn
+        values:
+          - disabled
 
   # -- Certificate for the service profile validator. If not provided then Helm
   # will generate one.
@@ -342,10 +339,10 @@ policyValidator:
   # -- Namespace selector used by admission webhook
   namespaceSelector:
     matchExpressions:
-    - key: config.linkerd.io/admission-webhooks
-      operator: NotIn
-      values:
-      - disabled
+      - key: config.linkerd.io/admission-webhooks
+        operator: NotIn
+        values:
+          - disabled
 
   # -- Certificate for the policy validator. If not provided then Helm
   # will generate one.
@@ -380,7 +377,6 @@ installNamespace: true
 # for more information
 nodeSelector:
   beta.kubernetes.io/os: linux
-
 # -|- Tolerations section, See the
 # [K8S documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
 # for more information
