@@ -203,6 +203,18 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/lb-controller-2.1.2/lb-controller-2.1.2.tgz
     version: 2.1.2
+  linkerd2:
+  - apiVersion: v1
+    created: "2021-11-05T21:32:17.109799027Z"
+    dependencies:
+    - name: partials
+      repository: file://./partials
+      version: 0.1.0
+    digest: 926b45ca245480e8d4aca543e548444a9d05e8f51fc5fce0ef51d38b9a17778d
+    name: linkerd2
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/linkerd2-2.11.1/linkerd2-2.11.1.tgz
+    version: 2.11.1
   tekton-dashboard:
   - apiVersion: v1
     created: "2021-09-16T11:04:00.220195031Z"
@@ -234,4 +246,4 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/tekton-triggers-0.16.0/tekton-triggers-0.16.0.tgz
     version: 0.16.0
-generated: "2021-11-05T21:26:02.562380551Z"
+generated: "2021-11-05T21:32:17.109823828Z"
