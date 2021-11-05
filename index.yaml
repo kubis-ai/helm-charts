@@ -45,6 +45,21 @@ entries:
     version: 1.11.2
   istio-discovery:
   - apiVersion: v1
+    created: "2021-11-05T21:39:15.615094148Z"
+    description: Helm chart for istio control plane
+    digest: 5e2c42b772e6887248af3c777f836ff3fc1d388442c2cb70763d48f322348a5e
+    icon: https://istio.io/latest/favicons/android-192x192.png
+    keywords:
+    - istio
+    - istiod
+    - istio-discovery
+    name: istio-discovery
+    sources:
+    - http://github.com/istio/istio
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/istio-discovery-1.11.4/istio-discovery-1.11.4.tgz
+    version: 1.11.4
+  - apiVersion: v1
     created: "2021-09-17T13:55:52.852908689Z"
     description: Helm chart for istio control plane
     digest: 88ab3dedf8afca6f9736bc753c56391fc26081ebdb50ed64c132f6fab25ce6e6
@@ -61,6 +76,21 @@ entries:
     version: 1.11.2
   istio-egress:
   - apiVersion: v1
+    created: "2021-11-05T21:39:15.772799021Z"
+    description: Helm chart for deploying Istio gateways
+    digest: 11951f6de1bb4d3f6f72e6edf9b6338e02964605c1085202c76638f6c218348e
+    icon: https://istio.io/latest/favicons/android-192x192.png
+    keywords:
+    - istio
+    - egressgateway
+    - gateways
+    name: istio-egress
+    sources:
+    - http://github.com/istio/istio
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/istio-egress-1.11.4/istio-egress-1.11.4.tgz
+    version: 1.11.4
+  - apiVersion: v1
     created: "2021-09-17T13:55:53.030908441Z"
     description: Helm chart for deploying Istio gateways
     digest: dd7779faa4cee28f439254d064ff8bc5c1d404f4b61637b010c632caf7c79614
@@ -76,6 +106,21 @@ entries:
     - https://github.com/kubis-ai/helm-charts/releases/download/istio-egress-1.11.2/istio-egress-1.11.2.tgz
     version: 1.11.2
   istio-ingress:
+  - apiVersion: v1
+    created: "2021-11-05T21:39:15.941676869Z"
+    description: Helm chart for deploying Istio gateways
+    digest: 1172c974de64de04fe5ee752f2ef0b7cf268d1660e94d2f599bc0b3371996bd5
+    icon: https://istio.io/latest/favicons/android-192x192.png
+    keywords:
+    - istio
+    - ingressgateway
+    - gateways
+    name: istio-ingress
+    sources:
+    - http://github.com/istio/istio
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/istio-ingress-1.11.4/istio-ingress-1.11.4.tgz
+    version: 1.11.4
   - apiVersion: v1
     created: "2021-09-17T13:55:53.210395636Z"
     description: Helm chart for deploying Istio gateways
@@ -158,6 +203,18 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/lb-controller-2.1.2/lb-controller-2.1.2.tgz
     version: 2.1.2
+  linkerd2:
+  - apiVersion: v1
+    created: "2021-11-05T21:39:16.110702718Z"
+    dependencies:
+    - name: partials
+      repository: file://./partials
+      version: 0.1.0
+    digest: 2a63bb5cca27cb1b66523f3e0a8a490851db53c6fe69548bbb487b02ea5d2327
+    name: linkerd2
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/linkerd2-2.11.1/linkerd2-2.11.1.tgz
+    version: 2.11.1
   tekton-dashboard:
   - apiVersion: v1
     created: "2021-09-16T11:04:00.220195031Z"
@@ -189,4 +246,4 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/tekton-triggers-0.16.0/tekton-triggers-0.16.0.tgz
     version: 0.16.0
-generated: "2021-11-05T21:32:17.109823828Z"
+generated: "2021-11-05T21:39:16.11100772Z"
