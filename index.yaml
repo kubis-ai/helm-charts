@@ -18,6 +18,19 @@ entries:
     version: 1.2.0
   istio-base:
   - apiVersion: v1
+    created: "2021-11-05T21:22:55.769164826Z"
+    description: Helm chart for deploying Istio cluster resources and CRDs
+    digest: 32fd17ebea23392cdac157b3dd523b17c50c7c4360a558e3cba8fdab0d4d74a0
+    icon: https://istio.io/latest/favicons/android-192x192.png
+    keywords:
+    - istio
+    name: istio-base
+    sources:
+    - http://github.com/istio/istio
+    urls:
+    - https://github.com/kubis-ai/helm-charts/releases/download/istio-base-1.11.4/istio-base-1.11.4.tgz
+    version: 1.11.4
+  - apiVersion: v1
     created: "2021-09-17T13:58:07.97348437Z"
     description: Helm chart for deploying Istio cluster resources and CRDs
     digest: cbf45c20f35ec214ded46b15dbace49c88bef4519728fd215035a58a8d74b1e3
@@ -176,4 +189,4 @@ entries:
     urls:
     - https://github.com/kubis-ai/helm-charts/releases/download/tekton-triggers-0.16.0/tekton-triggers-0.16.0.tgz
     version: 0.16.0
-generated: "2021-11-04T14:24:57.451991748Z"
+generated: "2021-11-05T21:22:55.769181427Z"
